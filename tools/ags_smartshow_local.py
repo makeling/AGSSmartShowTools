@@ -59,7 +59,7 @@ def execute_generate_vtpks():
 def execute_publish_vtpks():
     portal_url = "https://abi.arcgisonline.cn/arcgis/home"
     user_name = "arcgis"
-    pwd = "esri1234"
+    pwd = "******"
 
     target_workspace = '/gis/makl/vt_test/tilepackages'
 
