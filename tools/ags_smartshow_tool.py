@@ -299,7 +299,7 @@ def merge_shapefiles(target_workspace,target_shapefile_name):
         print("Merge shapefiles failed!")
 
 #Create VTPK
-def create_vtpk(aprx,outputPath,vtpkname,prj):
+def create_vtpk(aprx,outputPath,vtpkname,schema):
     import arcpy
     try:
         start_timeStampName = time.strftime('%Y_%m_%d %H:%M:%S', time.localtime(time.time()))
@@ -315,7 +315,7 @@ def create_vtpk(aprx,outputPath,vtpkname,prj):
 
         vptkPath = os.path.join(outputPath,vtpkname + '.vtpk')
 
-        arcpy.CreateVectorTilePackage_management(m, vptkPath, "EXISTING", prj, "INDEXED",
+        arcpy.CreateVectorTilePackage_management(m, vptkPath, "EXISTING", schema, "INDEXED",
                                              295828763.795777, 564.248588)
 
         print("VTPK path:", vptkPath)
